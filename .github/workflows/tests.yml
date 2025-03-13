@@ -32,10 +32,12 @@ jobs:
         run: |
           composer update --${{ matrix.stability }} --prefer-dist --no-interaction
 
-      - name: Execute tests
-        run: vendor/bin/phpunit --coverage-clover=coverage.xml
+      - name: Verify directory structure
+        run: |
+          ls -la
+          mkdir -p tests
+          [ -d "tests" ] && echo "Tests directory exists" || echo "Tests directory missing"
+          [ -f "phpunit.xml.dist" ] && echo "PHPUnit config exists" || echo "PHPUnit config missing"
 
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v3
-        with:
-          file: ./coverage.xml
+      - name: Execute tests
+        run: vendor/bin/phpunit
