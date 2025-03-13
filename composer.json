@@ -1,11 +1,11 @@
 {
-    "name": "PatrickSchababerle/shopware6-api-client",
+    "name": "schababerle-digital/shopware6-api-client",
     "description": "Ein PHP-Client für die Shopware 6 Admin API",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "Dein Name",
+            "name": "Patrick Schababerle",
             "email": "deine-email@example.com"
         }
     ],
