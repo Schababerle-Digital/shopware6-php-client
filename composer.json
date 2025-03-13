@@ -22,12 +22,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Shopware6Client\\": "src/"
+            "SchababerleDigital\\Shopware6\\ApiClient\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Shopware6Client\\Tests\\": "tests/"
+            "SchababerleDigital\\Shopware6\\ApiClient\\Tests\\": "tests/"
         }
     },
     "scripts": {

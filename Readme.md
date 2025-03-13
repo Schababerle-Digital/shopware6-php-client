@@ -14,7 +14,7 @@ A robust PHP client for the Shopware 6 Admin API with automatic authentication a
 ## Installation
 
 ```bash
-composer require PatrickSchababerle/shopware6-api-client
+composer require schababerle-digital/shopware6-api-client
 ```
 
 ## Quick Start

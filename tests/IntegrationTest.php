@@ -1,9 +1,9 @@
 <?php
 
-namespace Shopware6Client\Tests;
+namespace SchababerleDigital\Shopware6\ApiClient\Tests;
 
 use PHPUnit\Framework\TestCase;
-use Shopware6Client\Shopware6ApiClient;
+use SchababerleDigital\Shopware6\ApiClient\Shopware6ApiClient;
 
 /**
  * Diese Tests führen echte API-Requests durch und sind daher standardmäßig deaktiviert.

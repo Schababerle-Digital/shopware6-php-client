@@ -1,6 +1,6 @@
 <?php
 
-namespace Shopware6Client;
+namespace SchababerleDigital\Shopware6\ApiClient;
 
 use GuzzleHttp\Client as HttpClient;
 use GuzzleHttp\Exception\GuzzleException;
@@ -150,13 +150,13 @@ class Shopware6ApiClient
             return json_decode($response->getBody()->getContents(), true);
         } catch (GuzzleException $e) {
             $statusCode = $e->getCode();
-            
+
             // Bei 401 Unauthorized, versuche Token zu aktualisieren und erneut zu senden
             if ($statusCode === 401) {
                 $this->refreshAccessToken();
                 // Aktualisiere Authorization-Header
                 $options['headers']['Authorization'] = 'Bearer ' . $this->accessToken;
-                
+
                 try {
                     $response = $this->httpClient->request($method, $endpoint, $options);
                     return json_decode($response->getBody()->getContents(), true);
@@ -164,7 +164,7 @@ class Shopware6ApiClient
                     throw new \Exception('API-Request nach Token-Aktualisierung fehlgeschlagen: ' . $retryException->getMessage());
                 }
             }
-            
+
             throw new \Exception('API-Request fehlgeschlagen: ' . $e->getMessage());
         }
     }
